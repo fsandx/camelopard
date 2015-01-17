@@ -1,4 +1,6 @@
-# camelopard
+# Camelopard
+
+![alt tag](https://github.com/fsandx/camelopard/blob/master/assets/camelopard.png)
 
 IP camera toolbox for Nodejs
 
