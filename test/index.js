@@ -2,8 +2,7 @@ var should = require('chai').should(),
     camelopard = require('../index'),
     addDevice = camelopard.addDevice,
     getDevice = camelopard.getDevice,
-    getDownloadImageFileName = camelopard.getDownloadImageFileName,
-    getDownloadImageUrl = camelopard.getDownloadImageUrl;
+    downloadImage = camelopard.downloadImage;
 
 
 describe('#getDevice', function() {
@@ -22,10 +21,8 @@ describe('#addDevice', function() {
   });
 });
 
-describe('#getDownloadImageFileName', function() {
- //TODO: Add tests
-});
-
-describe('#getDownloadImageFileName', function() {
-	// TODO: Add tests
+describe('#actions', function() {
+  it('should have a downloadImage object', function() {
+    downloadImage.should.not.equal(null);
+  });
 });
