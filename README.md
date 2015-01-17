@@ -11,7 +11,7 @@ npm install camelopard
 ## Usage
 
  ```JavaScript
-var camelopard = require('../index.js');
+var camelopard = require('camelopard');
 console.log(camelopard.downloadImage());
  ```
 
