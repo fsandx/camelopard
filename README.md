@@ -15,7 +15,7 @@ var camelopard = require('camelopard');
 console.log(camelopard.downloadImage());
  ```
 
- (See camelopard-demo in the demo subfolder)
+ (See camelopard-demo.js in the demo subfolder)
 
 ## Tests
 
