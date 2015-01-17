@@ -11,7 +11,7 @@ More control commands and brands will be added in the near future.
 All contributions are welcome!
 
 
-# Usage
+## Installation
 
 npm install camelopard
 
