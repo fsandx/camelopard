@@ -2,10 +2,10 @@
 
 ![alt tag](https://github.com/fsandx/camelopard/blob/master/assets/camelopard.png)
 
-IP camera toolbox for Nodejs. 
-Currently Camelopard only supports a few methods for controlling an Axis IP camera. 
-More control commands and brands will be added in the near future. 
-All contributions are welcome! 
+Camelopard is an IP camera toolbox for Nodejs.
+Currently Camelopard only supports a few methods for controlling an Axis IP camera.
+More control commands and brands will be added in the near future.
+All contributions are welcome!
 
 # Usage
 
