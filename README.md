@@ -19,7 +19,7 @@ npm install camelopard
 
  ```JavaScript
 var camelopard = require('camelopard');
-console.log(camelopard.downloadImage());
+camelopard.downloadImage();
  ```
 
  (See camelopard-demo.js in the demo subfolder)
