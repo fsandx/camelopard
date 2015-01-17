@@ -1,0 +1,28 @@
+{
+  "name": "camelopard",
+  "version": "0.0.1",
+  "description": "IP camera toolbox package for Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fsandx/camelopard.git"
+  },
+  "keywords": [
+    "ipcamera",
+    "cctv",
+    "surveillance"
+  ],
+  "author": "Fredrik Sandberg <fredrik@subotnik.com> (https://github.com/fsandx)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fsandx/camelopard/issues"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mkdirp": "^0.5.0",
+    "mocha": "^2.1.0"
+  }
+}
