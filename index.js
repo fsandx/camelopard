@@ -73,11 +73,7 @@ module.exports = {
     return config.camera;
   },
 
-  // API actions
-  downloadImage: function () {
-    image.download(config.camera, function (error) {
-
-    });
-  }
+  // API objects
+  image: image
 
 };

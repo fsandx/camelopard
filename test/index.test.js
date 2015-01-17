@@ -2,7 +2,7 @@ var should = require('chai').should(),
     camelopard = require('../index'),
     addDevice = camelopard.addDevice,
     getDevice = camelopard.getDevice,
-    downloadImage = camelopard.downloadImage;
+    image = camelopard.image;
 
 
 describe('#getDevice', function() {
@@ -21,8 +21,8 @@ describe('#addDevice', function() {
   });
 });
 
-describe('#api downloadImage', function() {
+describe('#api object image', function() {
   it('should exist', function() {
-    downloadImage.should.not.equal(null);
+    image.should.not.equal(null);
   });
 });
