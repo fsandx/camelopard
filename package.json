@@ -16,7 +16,7 @@
     "surveillance"
   ],
   "author": "Fredrik Sandberg <fredrik@subotnik.com> (https://github.com/fsandx)",
-  "license": "MIT",
+  "license": "GPL",
   "bugs": {
     "url": "https://github.com/fsandx/camelopard/issues"
   },
