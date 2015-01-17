@@ -52,7 +52,7 @@ Public License instead of this License.*/
 var fs = require('fs');
 var request = require('request');
 var mkdirp = require('mkdirp');
-var downloadImage = require('./lib/downloadImage.js')
+var image = require('./lib/api/image.js');
 var config = {
     camera: {
       brand: 'Axis',
@@ -73,10 +73,11 @@ module.exports = {
     return config.camera;
   },
 
-  // Library actions
-
+  // API actions
   downloadImage: function () {
-    downloadImage.execute();
+    image.download(config.camera, function (error) {
+
+    });
   }
 
 };

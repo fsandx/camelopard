@@ -21,8 +21,8 @@ describe('#addDevice', function() {
   });
 });
 
-describe('#actions', function() {
-  it('should have a downloadImage object', function() {
+describe('#api downloadImage', function() {
+  it('should exist', function() {
     downloadImage.should.not.equal(null);
   });
 });
