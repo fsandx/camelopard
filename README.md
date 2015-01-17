@@ -4,7 +4,7 @@
 
 Camelopard is an IP camera toolbox for Nodejs.
 
-Currently Camelopard only supports a few methods for controlling an Axis IP camera.
+Currently Camelopard only supports a few methods for controlling an Axis IP camera, but it is easy to add new functionality.
 
 More control commands and brands will be added in the near future.
 
