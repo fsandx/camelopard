@@ -19,7 +19,8 @@ npm install camelopard
 
  ```JavaScript
 var camelopard = require('camelopard');
-camelopard.downloadImage();
+var cameraConfig = camelopard.getDevice();
+camelopard.image.download(cameraConfig);
  ```
 
  (See camelopard-demo.js in the demo subfolder)
