@@ -20,7 +20,10 @@ npm install camelopard
  ```JavaScript
 var camelopard = require('camelopard');
 var defaultConfig = camelopard.getDevice();
-camelopard.image.download(defaultConfig);
+camelopard.image.download(defaultConfig, function (err) {
+	if (err !== null) {console.log('Error!')}
+	else {console.log('Image file downloaded!')}
+});
  ```
 
  (See camelopard-demo.js in the demo subfolder)
