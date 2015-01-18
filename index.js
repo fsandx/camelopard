@@ -65,11 +65,11 @@ var config = {
 
 module.exports = {
 
-  addDevice: function (brand, ip, username, password) {
+  addCameraConfiguration: function (brand, ip, username, password) {
     return config.camera = {brand: brand, ip: ip, username: username, password: password};
   },
 
-  getDevice: function(ip) {
+  getCameraConfiguration: function(ip) {
     return config.camera;
   },
 
