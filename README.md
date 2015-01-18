@@ -16,7 +16,7 @@ All contributions are welcome!
 npm install camelopard
 
 ## Usage
-
+Download image:
  ```JavaScript
 var camelopard = require('camelopard');
 var defaultConfig = camelopard.getDevice();
