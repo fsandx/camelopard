@@ -19,9 +19,9 @@ npm install camelopard
 Download image:
  ```JavaScript
 var camelopard = require('camelopard');
-var defaultConfig = camelopard.getCameraConfiguration();
-camelopard.image.download(defaultConfig, function (err) {
-	if (err !== null) {console.log('Error!')}
+var myConfig = {brand: 'Axis', ip: '192.168.1.68', username: 'camelopard', password: 'pass'};
+camelopard.image.download(myConfig, function (err) {
+	if (err !== undefined) {console.log('Error!' + err)}
 	else {console.log('Image file downloaded!')}
 });
  ```

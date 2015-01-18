@@ -51,7 +51,6 @@ Public License instead of this License.*/
 
 var fs = require('fs');
 var request = require('request');
-var mkdirp = require('mkdirp');
 var image = require('./lib/api/image.js');
 var config = {
     camera: {
