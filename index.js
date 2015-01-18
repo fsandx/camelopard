@@ -49,8 +49,6 @@ Public License instead of this License.*/
 
 /*globals require */
 
-var fs = require('fs');
-var request = require('request');
 var image = require('./lib/api/image.js');
 var config = {
     camera: {

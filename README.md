@@ -15,7 +15,7 @@ All contributions are welcome!
 
 npm install camelopard
 
-## Usage
+## Example
 Download image:
  ```JavaScript
 var camelopard = require('camelopard');
