@@ -1,6 +1,6 @@
 {
   "name": "camelopard",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "IP camera toolbox package for Nodejs",
   "main": "index.js",
   "scripts": {

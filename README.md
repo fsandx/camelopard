@@ -34,6 +34,7 @@ camelopard.image.download(defaultConfig, function (err) {
 
 ## Release History
 
+* 0.1.3 Changing camera configuration method names, improvements of documentation
 * 0.1.2 Further improvements of structure, more tests
 * 0.1.1 Improving documentation, structure and testability
 * 0.1.0 Initial release
