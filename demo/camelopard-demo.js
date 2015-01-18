@@ -1,10 +1,14 @@
 //Camelopard demo
-// Find IP adress of camera through: nmap -sn 192.168.1.0/24
+// Find IP adress of camera through: 
+// nmap -sP -PA21,22,25,3389 192.168.1.0/24
+// or/and: arp -a -n
 // Run: node demo/camelopard-demo.js
 
 var camelopard = require('../index.js');
-var myConfig = {brand: 'Axis', ip: '192.168.1.68', username: 'camelopard', password: 'pass'};
-camelopard.image.download(myConfig, function (err) {
+var camConfig = {brand: 'Axis', ip: '192.168.1.68', username: 'camelopard', password: 'pass'};
+camelopard.image.download(camConfig, function (err, res) {
 	if (err !== undefined) {console.log('Error!' + err)}
-	else {console.log('Image file downloaded!')}
+	else {
+		console.log('Image file downloaded as: ' + res);
+	}
 });
