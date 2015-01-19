@@ -20,9 +20,12 @@ Download image:
  ```JavaScript
 var camelopard = require('camelopard');
 var myConfig = {brand: 'Axis', ip: '192.168.1.68', username: 'camelopard', password: 'pass'};
-camelopard.image.download(myConfig, function (err) {
-	if (err !== undefined) {console.log('Error!' + err)}
-	else {console.log('Image file downloaded!')}
+camelopard.image.download(myConfig, function (err, res) {
+	if (err !== undefined) {
+		console.log('Error!' + err);
+	} else {
+		console.log('Image file downloaded as: ' + res);
+	}
 });
  ```
 
