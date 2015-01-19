@@ -26,28 +26,66 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-/*globals require */
+/*globals require, module */
 
+var _ = require('lodash');
 var image = require('./lib/api/image.js');
-var config = {
+var defaultCameraConfiguration = {
     camera: {
+      name: 'default',
       brand: 'Axis',
       ip: '192.168.0.90',
       username: 'root',
       password: 'pass'
     }
   };
-
+var cameraConfigurations = [];
 
 module.exports = {
 
-  addCameraConfiguration: function (brand, ip, username, password) {
-    return config.camera = {brand: brand, ip: ip, username: username, password: password};
+  addCameraConfiguration: function (cameraConfiguration) {
+    var id =  _.uniqueId();
+    cameraConfiguration.id = id;
+    cameraConfigurations.push(cameraConfiguration);
+    return id;
   },
 
-  getCameraConfiguration: function(ip) {
-    return config.camera;
+  addCameraConfigurations: function (cameraConfigurations) {
+    _.forEach(cameraConfigurations, this.addCameraConfiguration);
   },
+
+  getCameraConfigurations: function() {
+    return cameraConfigurations;
+  },
+
+  getCameraConfigurationById: function(id) {
+    return _.where(cameraConfigurations, {id: id})[0];
+  },
+
+  getCameraConfigurationsByName: function(name) {
+    return _.where(cameraConfigurations, {name: name});
+  },
+
+  removeCameraConfigurationByName: function(name) {
+    _.remove(cameraConfigurations, function(config) {
+      return config.name === name;
+    });
+  },
+
+  removeCameraConfigurationById: function(id) {
+    _.remove(cameraConfigurations, function(config) {
+      return config.id === id;
+    });
+  },
+
+  removeAllCameraConfigurations: function(ip) {
+    cameraConfigurations = [];
+  },
+
+
+
+  // Exposing objects
+  defaultCameraConfiguration: defaultCameraConfiguration,
 
   // API objects
   image: image
