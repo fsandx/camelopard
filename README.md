@@ -18,7 +18,7 @@ npm install camelopard
 ## Example
 Download snapshot from several cameras at the same time:
  ```JavaScript
- var camelopard = require('../index.js');
+var camelopard = require('../index.js');
 var _ = require('lodash');
 
 camelopard.addCameraConfiguration({name: 'MycamA', brand: 'Axis', ip: '192.168.0.200', username: 'root', password: 'pass'});
