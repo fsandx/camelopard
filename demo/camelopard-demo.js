@@ -5,7 +5,7 @@
 // Run: node demo/camelopard-demo.js
 
 var camelopard = require('../index.js');
-var camConfig = {brand: 'Axis', ip: '192.168.1.68', username: 'camelopard', password: 'pass'};
+var camConfig = {brand: 'Axis', ip: '192.168.0.90', username: 'root', password: 'pass'};
 camelopard.image.download(camConfig, function (err, res) {
 	if (err !== undefined) {console.log('Error!' + err)}
 	else {
