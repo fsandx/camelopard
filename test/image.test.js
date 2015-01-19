@@ -10,8 +10,8 @@ describe('#config', function() {
 
 describe('#getFileName', function() {
   it('should return fileName with a certain length', function() {
-  	var fileName = image.getFileName();
-  	var isLargerThan = fileName.length > 17;
+  	var fileName = image.getFileName({id:'1'});
+  	var isLargerThan = fileName.length > 16;
     isLargerThan.should.equal(true);
   });
 });
