@@ -37,7 +37,8 @@ camelopard.image.download(myConfig, function (err, res) {
 
 ## Release History
 
-* 0.2.2 License chnaged to MIT
+* 0.3.0 Methods for multiple cameras support
+* 0.2.2 License changed to MIT
 * 0.2.1 Fixes for Image object
 * 0.1.3 Changing camera configuration method names, improvements of documentation
 * 0.1.2 Further improvements of structure, more tests
