@@ -32,11 +32,6 @@ var testConfigs = [
 
 describe('#index', function() {
 
-  /*
-  beforeEach(function(){
-    camelopard.cameraConfigurations = [];
-  });*/
-
   describe('#getCameraConfigurations', function() {
     it('should be able to access the list of configurations', function() {
       _.isArray(camelopard.getCameraConfigurations()).should.equal(true); 

@@ -30,6 +30,7 @@ SOFTWARE.
 
 var _ = require('lodash');
 var image = require('./lib/api/image.js');
+var ptz = require('./lib/api/ptz.js');
 var defaultCameraConfiguration = {
     camera: {
       name: 'default',
@@ -82,12 +83,11 @@ module.exports = {
     cameraConfigurations = [];
   },
 
-
-
   // Exposing objects
   defaultCameraConfiguration: defaultCameraConfiguration,
 
   // API objects
-  image: image
+  image: image,
+  ptz: ptz
 
 };
