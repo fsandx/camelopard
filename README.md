@@ -16,7 +16,8 @@ All contributions are welcome!
 npm install camelopard
 
 ## Example
-Download snapshot from several cameras at the same time:
+Small demo applications can be found here: https://github.com/fsandx/camelopard-keeper
+Below is an example of how to capture and download a snapshot from several cameras at the same time:
  ```JavaScript
 var camelopard = require('camelopard');
 var _ = require('lodash');
