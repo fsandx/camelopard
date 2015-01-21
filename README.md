@@ -37,14 +37,13 @@ _.forEach(cams, function (conf) {
 })
  ```
 
- (See camelopard-demo.js in the demo subfolder)
-
 ## Tests
 
   npm test
 
 ## Release History
 
+* 0.4.0 Basic PTZ API object added
 * 0.3.1 Fix for HTTP authentication
 * 0.3.0 Methods for multiple cameras support
 * 0.2.2 License changed to MIT
