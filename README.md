@@ -75,6 +75,7 @@ _.forEach(cams, function (conf) {
 
 ## Release History
 
+* 0.6.0 Basic parameters API object added
 * 0.5.0 New JSON data structure
 * 0.4.0 Basic PTZ API object added
 * 0.3.1 Fix for HTTP authentication
