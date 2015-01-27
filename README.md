@@ -1,6 +1,6 @@
 # Camelopard
 
-<img src="https://github.com/fsandx/camelopard/blob/master/assets/camelopard.png">
+<img src="https://raw.githubusercontent.com/fsandx/camelopard/master/assets/camelopard.png">
 
 Camelopard is an IP camera toolbox for Nodejs.
 
