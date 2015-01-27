@@ -28,24 +28,17 @@ SOFTWARE.
 
 /*globals require, module */
 
-var _ = require('lodash');
-var image = require('./lib/api/image.js');
-var ptz = require('./lib/api/ptz.js');
-var defaultCameraConfiguration = {
-    camera: {
-      name: 'default',
-      brand: 'Axis',
-      ip: '192.168.0.90',
-      username: 'root',
-      password: 'pass'
-    }
-  };
+var _     = require('lodash'),
+    image = require('./lib/api/image.js'),
+    ptz   = require('./lib/api/ptz.js'),
+    data  = require('./data.json');
+
 var cameraConfigurations = [];
 
 module.exports = {
 
   addCameraConfiguration: function (cameraConfiguration) {
-    var id =  _.uniqueId();
+    var id = _.uniqueId();
     cameraConfiguration.id = id;
     cameraConfigurations.push(cameraConfiguration);
     return id;
@@ -55,36 +48,36 @@ module.exports = {
     _.forEach(cameraConfigurations, this.addCameraConfiguration);
   },
 
-  getCameraConfigurations: function() {
+  getCameraConfigurations: function () {
     return cameraConfigurations;
   },
 
-  getCameraConfigurationById: function(id) {
+  getCameraConfigurationById: function (id) {
     return _.where(cameraConfigurations, {id: id})[0];
   },
 
-  getCameraConfigurationsByName: function(name) {
+  getCameraConfigurationsByName: function (name) {
     return _.where(cameraConfigurations, {name: name});
   },
 
-  removeCameraConfigurationByName: function(name) {
-    _.remove(cameraConfigurations, function(config) {
+  removeCameraConfigurationByName: function (name) {
+    _.remove(cameraConfigurations, function (config) {
       return config.name === name;
     });
   },
 
-  removeCameraConfigurationById: function(id) {
-    _.remove(cameraConfigurations, function(config) {
+  removeCameraConfigurationById: function (id) {
+    _.remove(cameraConfigurations, function (config) {
       return config.id === id;
     });
   },
 
-  removeAllCameraConfigurations: function(ip) {
+  removeAllCameraConfigurations: function () {
     cameraConfigurations = [];
   },
 
   // Exposing objects
-  defaultCameraConfiguration: defaultCameraConfiguration,
+  data: data,
 
   // API objects
   image: image,

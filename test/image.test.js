@@ -1,11 +1,12 @@
-var should = require('chai').should(),
-    image= require('../lib/api/image.js'),
-    params = image.config.parameters;
+var should        = require('chai').should(),
+    image         = require('../lib/api/image.js'),
+    data          = require('../data.json'),
+    defaultCamera = data.cameras[0];
 
 describe('#image', function() {
   describe('#config', function() {
-    it('should have a default configuration', function() {
-      params.compression.should.equal('30');
+    it('should have snapshot parameters', function() {
+      defaultCamera.snapshot.compression.should.equal(30);
     });
   });
 
@@ -19,7 +20,7 @@ describe('#image', function() {
 
   describe('#getDownloadPath', function() {
     it('should return downloadPath with a certain length', function() {
-      var path = image.getDownloadPath();
+      var path = image.getDownloadPath(defaultCamera);
       var isLargerThan = path.length > 2;
       isLargerThan.should.equal(true);
     });
@@ -27,12 +28,7 @@ describe('#image', function() {
 
   describe('#getDownloadUrl', function() {
     it('should return downloadUrl with a certain length', function() {
-      var url = image.getDownloadUrl({
-        brand: 'Axis',
-        ip: '192.168.0.90',
-        username: 'root',
-        password: 'pass'
-      });
+      var url = image.getDownloadUrl(defaultCamera);
       var isLargerThan = url.length > 31;
       isLargerThan.should.equal(true);
     });
