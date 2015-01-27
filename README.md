@@ -20,23 +20,53 @@ Small demo applications can be found here: https://github.com/fsandx/camelopard-
 
 Below is an example of how to capture and download a snapshot from several cameras at the same time:
  ```JavaScript
-var camelopard = require('camelopard');
-var _ = require('lodash');
+var camelopard  = require('camelopard'),
+    _           = require('lodash');
 
-camelopard.addCameraConfiguration({name: 'MycamA', brand: 'Axis', ip: '192.168.0.200', username: 'root', password: 'pass'});
-camelopard.addCameraConfiguration({name: 'MycamB', brand: 'Axis', ip: '192.168.0.150', username: 'root', password: 'pass'});
-camelopard.addCameraConfiguration({name: 'MycamV', brand: 'Axis', ip: '192.168.0.120', username: 'root', password: 'pass'});
-var cams = camelopard.getCameraConfigurations();
+var data = {
+  "cameras": [
+    {
+      "name": "Default Camera",
+      "brand": "Axis",
+      "ip": "192.168.0.150", 
+      "username": "root",
+      "password": "pass",
+      "snapshot": {
+        "resolution": "1024x768",
+        "compression": 30,
+        "rotation": 0,
+        "cameraNum": 1,
+        "downloadFolder": "files\/snapshots"
+      }
+    },
+    {
+      "name": "Default Camera",
+      "brand": "Axis",
+      "ip": "192.168.0.200", 
+      "username": "root",
+      "password": "pass",
+      "snapshot": {
+        "resolution": "1024x768",
+        "compression": 30,
+        "rotation": 0,
+        "cameraNum": 1,
+        "downloadFolder": "files\/snapshots"
+      }
+    }
+  ]
+};
+var cams = data.cameras;
 
 _.forEach(cams, function (conf) {
-    camelopard.image.download(conf, function (err, res) {
-      if (err !== undefined) {
-        console.log('Error!' + err)
-      } else {
-        console.log('Image file downloaded as: ' + res);
-      }
-  })
-})
+  camelopard.image.download(conf, function (err, res) {
+
+    if (err !== undefined) {
+      console.log('Error!' + err);
+    } else {
+      console.log('Image file downloaded as: ' + res);
+    }
+  });
+});
  ```
 
 ## Tests
@@ -45,6 +75,7 @@ _.forEach(cams, function (conf) {
 
 ## Release History
 
+* 0.5.0 New JSON data structure
 * 0.4.0 Basic PTZ API object added
 * 0.3.1 Fix for HTTP authentication
 * 0.3.0 Methods for multiple cameras support
