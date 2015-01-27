@@ -32,6 +32,15 @@ var testConfigs = [
 
 describe('#index', function() {
 
+  describe('#data', function() {
+    it('should have a default configuration', function() {
+      var cams = camelopard.data.cameras;
+      _.isArray(cams).should.equal(true);
+      (cams.length).should.equal(1);
+      (cams[0].ip).should.equal("192.168.0.90");
+    });
+  });
+
   describe('#getCameraConfigurations', function() {
     it('should be able to access the list of configurations', function() {
       _.isArray(camelopard.getCameraConfigurations()).should.equal(true); 
