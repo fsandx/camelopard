@@ -31,6 +31,7 @@ SOFTWARE.
 var _     = require('lodash'),
     image = require('./lib/api/image.js'),
     ptz   = require('./lib/api/ptz.js'),
+    param   = require('./lib/api/param.js'),
     data  = require('./data.json');
 
 var cameraConfigurations = [];
@@ -81,6 +82,7 @@ module.exports = {
 
   // API objects
   image: image,
-  ptz: ptz
+  ptz: ptz,
+  param: param,
 
 };
