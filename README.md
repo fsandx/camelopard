@@ -26,7 +26,7 @@ var camelopard  = require('camelopard'),
 var data = {
   "cameras": [
     {
-      "name": "Default Camera",
+      "name": "A-Building",
       "brand": "Axis",
       "ip": "192.168.0.150", 
       "username": "root",
@@ -40,7 +40,7 @@ var data = {
       }
     },
     {
-      "name": "Default Camera",
+      "name": "B-Building",
       "brand": "Axis",
       "ip": "192.168.0.200", 
       "username": "root",
