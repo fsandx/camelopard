@@ -3,8 +3,7 @@ var should = require('chai').should(),
     camelopard = require('../index'),
     addCameraConfiguration = camelopard.addCameraConfiguration,
     removeCameraConfigurationByName = camelopard.removeCameraConfigurationByName,
-    getCameraConfiguration = camelopard.getCameraConfiguration,
-    image = camelopard.image;
+    getCameraConfiguration = camelopard.getCameraConfiguration;
 
 var testConfigs = [
   {
@@ -123,7 +122,20 @@ describe('#index', function() {
 
   describe('#api object image', function() {
     it('should exist', function() {
-      image.should.not.equal(null);
+      camelopard.image.should.not.equal(null);
     });
   });
+
+  describe('#api object ptz', function() {
+    it('should exist', function() {
+      camelopard.ptz.should.not.equal(null);
+    });
+  });
+  
+  describe('#api object param', function() {
+    it('should exist', function() {
+      camelopard.param.should.not.equal(null);
+    });
+  });
+
 });
