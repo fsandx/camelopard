@@ -73,6 +73,7 @@ _.forEach(cams, function (conf) {
 
 ## Release History
 
+* 0.7.0 Improving snapshot filenames: prefix and timestamp
 * 0.6.0 Basic parameters API object added
 * 0.5.0 New JSON data structure
 * 0.4.0 Basic PTZ API object added
