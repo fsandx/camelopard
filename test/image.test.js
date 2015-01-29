@@ -10,15 +10,41 @@ describe('#image', function() {
     });
   });
 
-  describe('#getFileName', function() {
-    it('should return fileName with a certain length', function() {
+  describe('#getFileName', function () {
+
+    it('should be able to have an id prefix', function() {
+      var id = '28';
+      var fileName = image.getFileName({id: id}),
+          firstChars = fileName.substr(0, id.length);
+      firstChars.should.equal(id);
+    });
+
+    it('should be able to ignore id prefix if there is no id', function() {
+      var year = String(new Date().getFullYear()),
+          fileName = image.getFileName({}),
+          firstChars = fileName.substr(0, year.length);
+      firstChars.should.equal(year);
+      fileName = image.getFileName();
+      firstChars.should.equal(year);
+    });
+
+    it('should be able to add a custom prefix', function() {
+      var cameraConfiguration = data.cameras[0],
+          prefix = cameraConfiguration.snapshot.fileNamePrefix,
+          fileName = image.getFileName(cameraConfiguration),
+          firstChars = fileName.substr(0, prefix.length);
+      firstChars.should.equal(prefix);
+    });
+
+    it('should return fileName with a timestamp in ISO format', function() {
       var fileName = image.getFileName({id:'1'});
-      var isLargerThan = fileName.length > 16;
-      isLargerThan.should.equal(true);
+      (fileName.length > 28).should.equal(true);
+      (fileName.indexOf('T') > -1).should.equal(true);
+      (fileName.indexOf('Z') > -1).should.equal(true);
     });
   });
 
-  describe('#getDownloadPath', function() {
+  describe('#getDownloadPath', function () {
     it('should return downloadPath with a certain length', function() {
       var path = image.getDownloadPath(defaultCamera);
       var isLargerThan = path.length > 2;

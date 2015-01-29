@@ -21,7 +21,8 @@
         "compression": 30,
         "rotation": 0,
         "cameraNum": 1,
-        "downloadFolder": "files\/snapshots"
+        "downloadFolder": "files\/snapshots",
+        "fileNamePrefix": "default"
       }
     }
   ]
