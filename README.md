@@ -70,7 +70,7 @@ _.forEach(cams, function (conf) {
 
 ## Release History
 
-* 0.7.0 Replacing problematic characters in filename
+* 0.7.1 Replacing problematic characters in filename
 * 0.7.0 Improving snapshot filenames: prefix and timestamp
 * 0.6.0 Basic parameters API object added
 * 0.5.0 New JSON data structure
